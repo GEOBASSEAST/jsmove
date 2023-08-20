@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #div1 {
+                border: 1px dotted red;
+                margin: 10px;
+                padding: 5px;
+                width: 20%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="div1">Hello World</div>
+
+
+        <script>
+            let div1 = document.getElementById('div1');
+            let styles = getComputedStyle(div1);
+            let computedMargin = +styles.marginLeft.split('px')[0];
+            div1.style.marginLeft = computedMargin + 20 + 'px';
+        </script>
+
+    </body>
+</html>
